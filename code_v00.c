@@ -8,7 +8,12 @@ public:
         for(int i=0;i< nums.size();i++)
         {
             diff=target-nums.at(i);
-            
+            if(tMap.find(diff))
+            {
+
+            }else{
+                tMap.push(nums.at(i));
+            }   
           
         }
       return  tReturn;
