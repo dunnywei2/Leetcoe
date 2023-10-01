@@ -4,17 +4,18 @@ public:
     {
         vector<int> tReturn;
         int diff=0;
-         std::unordered_map<int,int> tMap;
-        std::unordered_map<int,int>::iterator iterator_map;
+         std::map<int,int> tMap;
+        std::map<int,int>::iterator iterator_map;
         for(int i=0;i< nums.size();i++)
         {
             diff=target-nums.at(i);
-            if(iterator_map=tMap.find(diff))
+            iterator_map=tMap.find(diff);
+            if(iterator_map!=tMap.end())
             {
-                   tReturn.push(iterator_map->seond);
-                   tReturn.push(i);
+                   tReturn.push_back(iterator_map->second);
+                   tReturn.push_back(i);
             }else{
-                tMap.push(nums.at(i));
+                tMap.insert(nums.at(i),i);
             }   
           
         }
