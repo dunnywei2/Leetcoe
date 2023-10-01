@@ -15,7 +15,9 @@ public:
                    tReturn.push_back(iterator_map->second);
                    tReturn.push_back(i);
             }else{
-                tMap.insert(nums.at(i),i);
+                tMap.insert(std::pair<int,int>(nums.at(i),i));
+
+                // mymap.insert ( std::pair<char,int>('z',500) );
             }   
           
         }
