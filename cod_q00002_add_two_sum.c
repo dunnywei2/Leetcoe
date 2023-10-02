@@ -11,6 +11,7 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        ListNode* l3=NULL;
         std::vector<int> carry;
        while( (l1->next!=NULL)||(l2->next!=NULL)
            {
@@ -22,4 +23,5 @@ public:
            
        
     }
+    return l3;
 };
