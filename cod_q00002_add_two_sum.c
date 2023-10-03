@@ -15,7 +15,14 @@ public:
         std::vector<int> carry;
        while( (l1->next!=NULL)||(l2->next!=NULL))
         {
-              
+            int val1;
+            if(l1)
+            {
+                val1=0
+            }
+            else{
+                val1=l1->val;
+            }  
                int val1=l1 ? NULL : 0 : l1->val;
                int val2=l2 ? NULL : 0 : l2->val;
                int sum=l1->val1+val2->val;
