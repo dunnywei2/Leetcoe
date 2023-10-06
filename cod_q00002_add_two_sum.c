@@ -39,7 +39,12 @@ public:
             //Firt digit (3+8)-10=1 with carry 1
             //Second digit (2+9+1)=2 with carry 1
             int remain=sum%10;
-            if(sum
+            int carry=0;
+            if(sum>10)
+            {
+                carry=(sum-10);
+            }    
+            
          }
            
         return l3;   
