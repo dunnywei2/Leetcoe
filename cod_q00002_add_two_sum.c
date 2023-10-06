@@ -33,8 +33,13 @@ public:
             }
                // int val1=l1 ? NULL : 0 : l1->val;
                // int val2=l2 ? NULL : 0 : l2->val;
-            int sum=l1->val1+val2->val;
-               
+            int sum=l1->val1+val2->val
+
+            //32+87
+            //Firt digit (3+8)-10=1 with carry 1
+            //Second digit (2+9+1)=2 with carry 1
+            int remain=sum%10;
+            if(sum
          }
            
         return l3;   
