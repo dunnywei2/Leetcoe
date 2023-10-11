@@ -20,10 +20,11 @@ public:
             int val1,val2;
             if(l1)
             {
-                val1=0;
+                val1=l1->val;
+                
             }
             else{
-                val1=l1->val;
+                val1=0;
             }  
             if (l2)
             {
