@@ -13,6 +13,7 @@ public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         ListNode* L3=NULL;
         std::vector<int> carryV;
+        carryV.push_back(0);
         ListNode* carryL;
         int counter=0;
        while( (l1->next!=NULL)||(l2->next!=NULL))
