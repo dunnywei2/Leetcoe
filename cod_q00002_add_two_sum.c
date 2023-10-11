@@ -58,8 +58,10 @@ public:
             {
                 carry=(sum-10);
             }    
-            l1=l1->next;
-            l2=l2->next;
+            if(l1->next!=NULL)
+                l1=l1->next;
+            if(l2->next!=NULL) 
+                l2=l2->next;
             carryV.push_back(sum);
             L3=new ListNode(remain,L3);
             counter++;
