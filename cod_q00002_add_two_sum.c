@@ -2,11 +2,14 @@ class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         ListNode* L3=new ListNode(0) ;
+
         ListNode *head=NULL;
+                head=L3;   
+
         std::vector<int> carryV;
         carryV.push_back(0);
         int counter=0;
-       while( ((l1->next!=NULL)||(l2->next!=NULL)) && counter ==0)
+       while( ((l1->next!=NULL)||(l2->next!=NULL)) && counter<=2)
         {
             int val1,val2;
             if(l1)
@@ -47,8 +50,7 @@ public:
             L3=L3->next;
             counter++;
          }
-        head=L3;   
-        return head;   
+        return head->next;   
     }
     
 };
