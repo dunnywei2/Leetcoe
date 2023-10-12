@@ -1,3 +1,6 @@
+//hinnt->https://www.youtube.com/watch?v=di_jUp3tWUI
+/*****************************************************/
+//Don's answer 
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
@@ -9,7 +12,7 @@ public:
         std::vector<int> carryV;
         carryV.push_back(0);
         int counter=0;
-       while( ((l1)||(l2)) && counter<=10)
+       while( ((l1)||(l2)) || carryV.at(counter)>0)
         {
             int val1,val2;
             if(l1)
@@ -48,7 +51,10 @@ public:
             carryV.push_back(carry);
             L3->next=new ListNode(remain);
             L3=L3->next;
-            l1=l1->next;
+            if(l1)
+                l1=l1->next;
+            else
+                l1=NULL;
             if (l2) 
                l2=l2->next;
             else
