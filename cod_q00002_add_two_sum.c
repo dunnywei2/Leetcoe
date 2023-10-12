@@ -7,6 +7,7 @@
  *     ListNode(int x) : val(x), next(nullptr) {}
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
+ *hint->https://www.youtube.com/watch?v=di_jUp3tWUI
  */
 class Solution {
 public:
@@ -53,17 +54,14 @@ public:
             //Firt digit (3+8)-10=1 with carry 1
             //Second digit (2+9+1)=2 with carry 1
             int remain=sum%10;
-            int carry=0;
-            if(sum>10)
-            {
-                carry=(sum-10);
-            }    
+            int carry=sum/10;
+                
             if(l1->next!=NULL)
                 l1=l1->next;
             if(l2->next!=NULL) 
                 l2=l2->next;
             carryV.push_back(carry);
-            L3=new ListNode(remain,L3);
+            L3=new ListNode(remain);
             counter++;
          }
            
