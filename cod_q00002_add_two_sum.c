@@ -12,7 +12,8 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode* L3=NULL;
+        ListNode* L3=new ListNode(0) ;
+        ListNode *head=L3->next;
         std::vector<int> carryV;
         carryV.push_back(0);
         ListNode* carryL;
@@ -61,11 +62,12 @@ public:
             if(l2->next!=NULL) 
                 l2=l2->next;
             carryV.push_back(carry);
-            L3=new ListNode(remain);
+            L3->next=new ListNode(remain);
+            L3=L3->next;
             counter++;
          }
            
-        return L3;   
+        return head;   
     }
     
 };
