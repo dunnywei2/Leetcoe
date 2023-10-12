@@ -9,7 +9,7 @@ public:
         std::vector<int> carryV;
         carryV.push_back(0);
         int counter=0;
-       while( ((l1!=NULL)||(l2!=NULL)) && counter<=3)
+       while( ((l1)||(l2)) && counter<=10)
         {
             int val1,val2;
             if(l1)
@@ -41,13 +41,18 @@ public:
             int remain=sum%10;
             int carry=sum/10;
                 
-            if(l1->next!=NULL)
-                l1=l1->next;
-            if(l2->next!=NULL) 
-                l2=l2->next;
+            // if(l1->next!=NULL)
+                // l1=l1->next;
+            // if(l2->next!=NULL) 
+                // l2=l2->next;
             carryV.push_back(carry);
             L3->next=new ListNode(remain);
             L3=L3->next;
+            l1=l1->next;
+            if (l2) 
+               l2=l2->next;
+            else
+               l2=NULL;
             counter++;
          }
         return head->next;   
