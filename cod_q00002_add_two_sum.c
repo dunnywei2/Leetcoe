@@ -29,7 +29,7 @@ public:
             }  
             if (l2)
             {
-                val2=l1->val;
+                val2=l2->val;
             }
             else{
                 val2=0;
@@ -62,7 +62,7 @@ public:
                 l1=l1->next;
             if(l2->next!=NULL) 
                 l2=l2->next;
-            carryV.push_back(sum);
+            carryV.push_back(carry);
             L3=new ListNode(remain,L3);
             counter++;
          }
