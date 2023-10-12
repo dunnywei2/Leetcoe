@@ -9,7 +9,7 @@ public:
         std::vector<int> carryV;
         carryV.push_back(0);
         int counter=0;
-       while( ((l1->next!=NULL)||(l2->next!=NULL)) && counter<=2)
+       while( ((l1!=NULL)||(l2!=NULL)) && counter<=3)
         {
             int val1,val2;
             if(l1)
