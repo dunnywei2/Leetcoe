@@ -1,20 +1,32 @@
 class Solution {
+protected:
+   std::vector<char> vector;
 public:
+
+    bool checkVector(char tChar)
+    {
+        // if(!tBuffer.empty()){     
+            
+        //     if(std::find(vector.begin(), vector.end(), tChar)!=vector.end()){
+        //       {
+        //           return true
+        //       }
+              
+           
+        // }
+        return false;
+    }
     int lengthOfLongestSubstring(string s) {
-        std::vector<char> tBuffer;
+        
+
+
         for(int i=0;i<s.length();i++)
         {
-           if(!tBuffer.empty()){     
-              std::vector<char>::iterator iter;
-              iter=tBuffer.find(s[i]);
-              iter=tBuffer.find(s[i]);
-              if(iter!=tBuffer.end())
-              {
-                  return true
-              }
-              
-           }
-            if(s[i]) 
+           
+            if(this->checkVector(s[i]))
+            {
+                return 1;
+            } 
         }
         return 0;
     }
