@@ -1,33 +1,33 @@
 class Solution {
 protected:
    std::vector<char> vector;
-public:
-
+   public:
+ 
     bool checkVector(char tChar)
     {
-        // if(!tBuffer.empty()){     
+        if(!vector.empty())
+        {     
             
-        //     if(std::find(vector.begin(), vector.end(), tChar)!=vector.end()){
-        //       {
-        //           return true
-        //       }
-              
-           
-        // }
+            if(std::find(vector.begin(), vector.end(), tChar)!=vector.end())
+              {
+                  return true;
+              }
+        }
         return false;
     }
     int lengthOfLongestSubstring(string s) {
         
+       int count_substring=0;
 
 
         for(int i=0;i<s.length();i++)
         {
            
-            if(this->checkVector(s[i]))
+            if(!this->checkVector(s[i]))
             {
-                return 1;
+                count_substring++;
             } 
         }
-        return 0;
+        return count_substring;
     }
 };
