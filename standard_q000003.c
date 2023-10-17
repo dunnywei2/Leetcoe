@@ -1,3 +1,9 @@
+/*
+ *->https://www.geeksforgeeks.org/window-sliding-technique/
+ *->https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/
+ *->about set->https://www.youtube.com/watch?v=682xT_TcKUg
+ */
+
 #include <string.h>
 class Solution {
 protected:
