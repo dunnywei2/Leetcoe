@@ -13,7 +13,7 @@ protected:
               pValue=*iter;
               return true;
          }
-        pValue='\0';
+        
         tVector.insert(tChar);
         return false;
     }
@@ -27,7 +27,7 @@ protected:
            
             if(!this->checkVector(s[i]))
             {
-               int result=-10;
+               
                if(strcmp(&pValue,&s[i]))
                   count_substring++;
                else
