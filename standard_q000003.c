@@ -1,8 +1,3 @@
-/*
- *->https://www.geeksforgeeks.org/window-sliding-technique/
- *->https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/
- *->about set->https://www.youtube.com/watch?v=682xT_TcKUg
- */
 #include <string.h>
 class Solution {
 protected:
@@ -33,10 +28,12 @@ protected:
             if(!this->checkVector(s[i]))
             {
                int result=-10;
-               if(pValue==s[i])
-                   count_substring=0;
+               if(strcmp(&pValue,&s[i]))
+                  count_substring++;
                else
-                   count_substring++;
+                   
+                  count_substring=0;
+
             } 
         }
         return count_substring;
