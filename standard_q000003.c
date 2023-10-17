@@ -3,7 +3,7 @@
  *->https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/
  *->about set->https://www.youtube.com/watch?v=682xT_TcKUg
  */
-
+#include <string.h>
 class Solution {
 protected:
    std::set<char> tVector;
@@ -32,10 +32,11 @@ protected:
            
             if(!this->checkVector(s[i]))
             {
-               if(pValue!=s[i])
-                   count_substring++;
+               int result=-10;
+               if(strcmp(pValue,s[i]))
+                   count_substring=0;
                else
-                  count_substring=0;
+                   count_substring++;
             } 
         }
         return count_substring;
