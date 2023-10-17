@@ -33,7 +33,7 @@ protected:
             if(!this->checkVector(s[i]))
             {
                int result=-10;
-               if(strcmp(pValue,s[i]))
+               if(pValue==s[i])
                    count_substring=0;
                else
                    count_substring++;
