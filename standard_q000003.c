@@ -6,19 +6,17 @@
 
 class Solution {
 protected:
-   std::vector<char> vector;
+   std::set<char> tVector;
    public:
  
     bool checkVector(char tChar)
     {
-        if(!vector.empty())
-        {     
             
-            if(std::find(vector.begin(), vector.end(), tChar)!=vector.end())
-              {
-                  return true;
-              }
-        }
+         if(std::set<char>::iterator iter=tVector.find(tChar);iter!=tVector.end())
+         {
+              return true;
+         }
+        tVector.insert(tChar);
         return false;
     }
     int lengthOfLongestSubstring(string s) {
