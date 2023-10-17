@@ -7,6 +7,7 @@
 class Solution {
 protected:
    std::set<char> tVector;
+   char pValue;
    public:
  
     bool checkVector(char tChar)
@@ -14,8 +15,10 @@ protected:
             
          if(std::set<char>::iterator iter=tVector.find(tChar);iter!=tVector.end())
          {
+              pValue=*iter;
               return true;
          }
+        pValue='\0';
         tVector.insert(tChar);
         return false;
     }
@@ -29,7 +32,10 @@ protected:
            
             if(!this->checkVector(s[i]))
             {
-                count_substring++;
+               if(pValue!=s[i])
+                   count_substring++;
+               else
+                  count_substring=0;
             } 
         }
         return count_substring;
