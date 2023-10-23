@@ -1,4 +1,19 @@
 
+int32 shiftingL(int32 aValue)
+{
+   int32 tTemp=aValu>>24;
+   int32 tSum=0;
+   int counter=0;
+   while(tTemp>0)
+   {
+      tSum=0.1*(2^counter)*(tTemp>>(8-counter));
+     counter++;
+     tTemp=tTemp>>1;
+   }
+
+   while
+}
+
 // XXXX XXX_ XXXX XXXX XXXX XXXX XXXX XXXX
 // MMMM MMM1 NNNN NNNN NNNN NNNN NNNN NNNN
 // where M is decimal and N is Integer for greater number
