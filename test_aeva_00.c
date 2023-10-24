@@ -1,17 +1,20 @@
+#include <string.h>
+#include <stdlib.h>
 
+#define MASK 0x1U
 int32 shiftingL(int32 aValue)
 {
    int32 tTemp=aValu>>24;
    int32 tSum=0;
    int counter=0;
-   while(tTemp>0)
+   while(counter<8)
    {
-      tSum=0.1*(2^counter)*(tTemp>>(8-counter));
+      tSum=0.1*(2^counter)*+(tTemp&MASK);
      counter++;
      tTemp=tTemp>>1;
    }
-
-   while
+   printf("tSum is %d \n",tSum);
+   return tSum;
 }
 
 // XXXX XXX_ XXXX XXXX XXXX XXXX XXXX XXXX
@@ -37,5 +40,11 @@ float convert_to_temp(uint32 input_vall)
    else{
         //standard
    } 
+
+}
+
+int main()
+{
+   shiftingL(0x03FFFFFF);
 
 }
