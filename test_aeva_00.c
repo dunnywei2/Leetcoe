@@ -5,16 +5,18 @@
 #define MASK 0x1U
 int32_t shiftingL(int32_t aValue)
 {
-   int32_t tTemp=aValue>>24;
+    int32_t tTemp=aValue>>24;
    printf("tTemp is %d \n",tTemp);
 
    int32_t tSum=0;
+   
+   float tSum2=0;
    int counter=0;
    while(counter<8)
    {
       tSum+=1*(2^counter)*+(tTemp&MASK);
          printf("tSum is %d counter %d \n",tSum,counter);
-
+     tSum2+=0.1;
      counter++;
      tTemp=tTemp>>1;
    }
