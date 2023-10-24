@@ -6,15 +6,18 @@
 int32_t shiftingL(int32_t aValue)
 {
    int32_t tTemp=aValue>>24;
+   printf("tTemp is %d \n",tTemp);
+
    int32_t tSum=0;
    int counter=0;
    while(counter<8)
    {
-      tSum=0.1*(2^counter)*+(tTemp&MASK);
+      tSum+=1*(2^counter)*+(tTemp&MASK);
+         printf("tSum is %d counter %d \n",tSum,counter);
+
      counter++;
      tTemp=tTemp>>1;
    }
-   printf("tSum is %d \n",tSum);
    return tSum;
 }
 
