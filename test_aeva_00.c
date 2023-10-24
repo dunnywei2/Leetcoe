@@ -5,7 +5,7 @@
 #define MASK 0x1U
 int32_t shiftingL(int32_t aValue)
 {
-   int32_t tTemp=aValu>>24;
+   int32_t tTemp=aValue>>24;
    int32_t tSum=0;
    int counter=0;
    while(counter<8)
@@ -22,7 +22,7 @@ int32_t shiftingL(int32_t aValue)
 // MMMM MMM1 NNNN NNNN NNNN NNNN NNNN NNNN
 // where M is decimal and N is Integer for greater number
 // MMMM MMM1, where M is the decimal number. First M is decimal
-float convert_to_temp(int32_t input_vall)
+float convert_to_temp(int32_t input_val)
 {
    int32_t tValue=0;
    float tSum=0;
@@ -32,16 +32,16 @@ float convert_to_temp(int32_t input_vall)
      tValue=(input_val&0x001FFFF);
      int32_t tTemp=(input_val&0xFFF10000)>>24;
       float tFloat=0;
-     for(int i=0;i<7;i++)
-     {
-        tFloat+=16*i+
-     } 
+    //  for(int i=0;i<7;i++)
+    //  {
+    //     tFloat+=16*i+
+    //  } 
       
    }  
-   else{
-        //standard
-   } 
-
+//   else{
+//         //standard
+//   } 
+  return tSum;
 }
 
 int main()
