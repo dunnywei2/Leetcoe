@@ -16,7 +16,9 @@ int32_t shiftingL(int32_t aValue)
    {
       tSum+=1*(2^counter)+(tTemp&MASK);
          printf("tSum is %d counter %d \n",tSum,counter);
-     tSum2+=0.1;
+     tSum2+=0.1+tSum;
+              printf("tSum2 is %f counter %d \n",tSum2,counter);
+
      counter++;
      tTemp=tTemp>>1;
    }
