@@ -13,7 +13,7 @@ protected:
  
     bool checkVector(char tChar)
     {
-            
+         pValue='_';         
          if(std::set<char>::iterator iter=tVector.find(tChar);iter!=tVector.end())
          {
               pValue=*iter;
@@ -45,3 +45,6 @@ protected:
         return count_substring;
     }
 };
+//using "pwwkew"
+//First letter p->    line 24 "return false"-> line 34-> if(true)->line 37->comparing 'p' and '_'->count_substring=1
+//Second letter w->   line 24 "return false"-> line 34-> if(true)->line 37->comparing 'w' and '_'->count_substring=2
