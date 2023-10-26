@@ -55,3 +55,9 @@ protected:
 //Second letter w->   line 24 "return false"-> line 34-> if(true)->line 37->comparing 'w' and '_'->count_substring=2
 //third letter w->   line 20 "return true"-> line 44-> else->line 45>count_substring=0
 
+//"pwwkew"
+//i=0 as p, j=0 as p->chars->"p"->return true->max is 1
+//i=0 as p, j=2 as w->chars->"pww"->return false->no max
+//i=0 as p, j=3 as k->chars="pww"->return false->no max->can't continue since it will always get blocked in j=2, IMPORTANT
+
+
