@@ -4,7 +4,6 @@
  *->about set->https://www.youtube.com/watch?v=682xT_TcKUg
  */
 
-#include <string.h>
 class Solution {
 protected:
    std::set<char> tVector;
@@ -17,8 +16,6 @@ protected:
          if(std::set<char>::iterator iter=tVector.find(tChar);iter!=tVector.end())
          {
               pValue=*iter;
-              tVector.clear();
-              tVector.insert(tChar);
 
               return true;
          }
@@ -47,7 +44,8 @@ protected:
            else
                count_substring=1;
         }
-        return count_substring;
+        //return count_substring;
+       return tVector.size();
     }
 };
 //using "pwwkew"
