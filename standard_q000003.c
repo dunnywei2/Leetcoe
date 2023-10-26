@@ -17,6 +17,9 @@ protected:
          if(std::set<char>::iterator iter=tVector.find(tChar);iter!=tVector.end())
          {
               pValue=*iter;
+              tVector.clear();
+              tVector.insert(tChar);
+
               return true;
          }
         
@@ -40,7 +43,9 @@ protected:
                    
                   count_substring=0;
 
-            } 
+            }
+           else
+               count_substring=1;
         }
         return count_substring;
     }
@@ -48,3 +53,5 @@ protected:
 //using "pwwkew"
 //First letter p->    line 24 "return false"-> line 34-> if(true)->line 37->comparing 'p' and '_'->count_substring=1
 //Second letter w->   line 24 "return false"-> line 34-> if(true)->line 37->comparing 'w' and '_'->count_substring=2
+//third letter w->   line 20 "return true"-> line 44-> else->line 45>count_substring=0
+
