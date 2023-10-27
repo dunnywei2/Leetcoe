@@ -1,63 +1,38 @@
-/*
- *->https://www.geeksforgeeks.org/window-sliding-technique/
- *->https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/
- *->about set->https://www.youtube.com/watch?v=682xT_TcKUg
- *->https://github.com/keineahnung2345/leetcode-cpp-practices/blob/master/3.%20Longest%20Substring%20Without%20Repeating%20Characters.cpp
- *->https://www.interviewbit.com/blog/longest-substring-without-repeating-characters/
- */
-
-class Solution {
-protected:
-   std::set<char> tVector;
-   char pValue;
-   public:
- 
-    bool checkVector(char tChar)
-    {
-         pValue='_';         
-         if(std::set<char>::iterator iter=tVector.find(tChar);iter!=tVector.end())
-         {
-              pValue=*iter;
-
-              return true;
-         }
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <iostream>
+#include <set>
+void context_grep(int argc, char **argv, int context, char *expr)
+{
+   std::set<std::string> str;
+   
+   int each_array=strlen(argv[0]);
+   printf("argv_length_col is %d \n",each_array);
+   
+   for(int i=0;i<7;i++)
+   {
+       int complex_index=0;
+      
+        int length=strlen(argv[i]);
+        printf("argv %d with i %d %s \n",strlen(argv[i]),i,argv[i]);
         
-        tVector.insert(tChar);
-        return false;
-    }
-    int lengthOfLongestSubstring(string s) {
-        
-       int count_substring=0;
+
+   }
+  
+}
 
 
-        for(int i=0;i<s.length();i++)
-        {
-           
-            if(!this->checkVector(s[i]))
-            {
-               
-               if(strcmp(&pValue,&s[i]))
-                  count_substring++;
-               else
-                   
-                  count_substring=0;
-
-            }
-           else
-               count_substring=1;
-        }
-        //return count_substring;
-       return tVector.size();
-    }
-};
-//using "pwwkew"
-//First letter p->    line 24 "return false"-> line 34-> if(true)->line 37->comparing 'p' and '_'->count_substring=1
-//Second letter w->   line 24 "return false"-> line 34-> if(true)->line 37->comparing 'w' and '_'->count_substring=2
-//third letter w->   line 20 "return true"-> line 44-> else->line 45>count_substring=0
-
-//"pwwkew"
-//i=0 as p, j=0 as p->chars->"p"->return true->max is 1
-//i=0 as p, j=2 as w->chars->"pww"->return false->no max
-//i=0 as p, j=3 as k->chars="pww"->return false->no max->can't continue since it will always get blocked in j=2, IMPORTANT
-
-
+int main()
+{
+    char *argv[] = {
+    "Hello world",
+    "Welcome to California",
+    "Goodbye",
+    "Big sky",
+    "Nice job",
+    "Blue sky",
+    "Hey Joe"
+    };
+    context_grep(6, argv, 2, "sky");
+}
