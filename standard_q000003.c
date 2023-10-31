@@ -34,12 +34,7 @@ public:
                     ans = max(ans, j-i+1);
                 }
                 else{
-                   std::stringstream snew;
-                   for(int counter=i;counter<=j;counter++)
-                   {
-                      snew<<s[counter];
-                   }
-                   std::cout<<"snew"<<snew.str()<<std::endl;
+                   printf("find duplicate and go i is %d and j is %d \n",i,j);
                 } 
             }
 
@@ -48,8 +43,7 @@ public:
        
         return ans;
     }
-};
-    
+};    
     
     
     //using "pwwkew"
