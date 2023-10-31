@@ -1,3 +1,11 @@
+ *->https://www.geeksforgeeks.org/window-sliding-technique/
+ *->https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/
+ *->about set->https://www.youtube.com/watch?v=682xT_TcKUg
+ *->https://github.com/keineahnung2345/leetcode-cpp-practices/blob/master/3.%20Longest%20Substring%20Without%20Repeating%20Characters.cpp
+ *->https://www.interviewbit.com/blog/longest-substring-without-repeating-characters/
+ */
+
+
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
