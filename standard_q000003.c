@@ -3,45 +3,56 @@
  *->about set->https://www.youtube.com/watch?v=682xT_TcKUg
  *->https://github.com/keineahnung2345/leetcode-cpp-practices/blob/master/3.%20Longest%20Substring%20Without%20Repeating%20Characters.cpp
  *->https://www.interviewbit.com/blog/longest-substring-without-repeating-characters/
+ *->shift array in C->https://stackoverflow.com/questions/55399500/c-array-how-can-i-shift-each-character-in-a-string
  */
 
+#include <string>
+#include <sstream>
 class Solution {
 protected:
-   std::set<char> tVector;
-   char pValue;
-   public:
- 
-    bool checkVector(std::string &c, int start,int end)
-    {
-         pValue='_';         
-         if(std::set<char>::iterator iter=tVector.find(tChar);iter!=tVector.end())
-         {
-              pValue=*iter;
 
-              return true;
-         }
-        
-        tVector.insert(tChar);
-        return false;
-    }
-    int lengthOfLongestSubstring(string s) {
-        
-       int count_substring=0;
+public:
+    bool allUnique(string& s, int start, int end){
+           set<char> chars;
 
-
-        for(int i=0;i<s.size();i++)
-        {
-           for(int j=i+1;j<s.size();j++)
-           {
-
-              if(checkVector(&s,i,j))
-              {
-                 
-              }
-           }
+        for(int i = start; i <= end; i++){
+            auto res = chars.insert(s[i]);
+            if(res.second == false) return false;
         }
+        
+        return true;
+    };
+    
+
+
+    int lengthOfLongestSubstring(string s) {
+        int ans = 0;
+        for(int i = 0; i < s.size(); i++){
+            for(int j = i; j < s.size(); j++){
+                if(allUnique(s, i, j)){
+                   printf("i is %d and j is %d \n",i,j);
+                    ans = max(ans, j-i+1);
+                }
+                else{
+                   std::stringstream snew;
+                   for(int counter=i;counter<=j;counter++)
+                   {
+                      snew<<s[counter];
+                   }
+                   std::cout<<"snew"<<snew.str()<<std::endl;
+                } 
+            }
+
+        }
+
+       
+        return ans;
     }
-};//using "pwwkew"
+};
+    
+    
+    
+    //using "pwwkew"
 //First letter p->    line 24 "return false"-> line 34-> if(true)->line 37->comparing 'p' and '_'->count_substring=1
 //Second letter w->   line 24 "return false"-> line 34-> if(true)->line 37->comparing 'w' and '_'->count_substring=2
 //third letter w->   line 20 "return true"-> line 44-> else->line 45>count_substring=0
