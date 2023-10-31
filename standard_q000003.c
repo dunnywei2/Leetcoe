@@ -11,7 +11,7 @@ protected:
    char pValue;
    public:
  
-    bool checkVector(char tChar)
+    bool checkVector(std::string &c, int start,int end)
     {
          pValue='_';         
          if(std::set<char>::iterator iter=tVector.find(tChar);iter!=tVector.end())
@@ -29,27 +29,19 @@ protected:
        int count_substring=0;
 
 
-        for(int i=0;i<s.length();i++)
+        for(int i=0;i<s.size();i++)
         {
-           
-            if(!this->checkVector(s[i]))
-            {
-               
-               if(strcmp(&pValue,&s[i]))
-                  count_substring++;
-               else
-                   
-                  count_substring=0;
+           for(int j=i+1;j<s.size();j++)
+           {
 
-            }
-           else
-               count_substring=1;
+              if(checkVector(&s,i,j))
+              {
+                 
+              }
+           }
         }
-        //return count_substring;
-       return tVector.size();
     }
-};
-//using "pwwkew"
+};//using "pwwkew"
 //First letter p->    line 24 "return false"-> line 34-> if(true)->line 37->comparing 'p' and '_'->count_substring=1
 //Second letter w->   line 24 "return false"-> line 34-> if(true)->line 37->comparing 'w' and '_'->count_substring=2
 //third letter w->   line 20 "return true"-> line 44-> else->line 45>count_substring=0
