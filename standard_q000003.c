@@ -90,14 +90,27 @@ public:
 };
 
 //FOR C
-nt lengthOfLongestSubstring(char * s){
+int lengthOfLongestSubstring(char * s){
     int length=strlen(s);
     // printf("length %d \n",length);
+
+    int i,j,l,k=0;
+    int n=0;
+    //n->tracking number of continous chracters without repeating
+    char c;//to find out the ASCII of any string
+    int pos[128]={0}; //128 entries in ASCII table
+    
+    
+    
     for(int i=0;i<length;i++)
     {
-        
+       n++;
+       c=s[j];
+
+       l=i-pos[c]+1;
+       printf("l : %l, i: %i, c is %c, pos[c] is %d, n is %d \n",l,i,c,pos[c],n);
     }
-    
+    , 
     return 0;   
 }
 
