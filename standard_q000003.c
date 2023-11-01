@@ -85,7 +85,21 @@ public:
        
         return max;
     }
-};    
+
+};
+
+//FOR C
+nt lengthOfLongestSubstring(char * s){
+    int length=strlen(s);
+    // printf("length %d \n",length);
+    for(int i=0;i<length;i++)
+    {
+        
+    }
+    
+    return 0;   
+}
+
     
     
     //using "pwwkew"
