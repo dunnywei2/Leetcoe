@@ -5,7 +5,8 @@
  *->https://github.com/keineahnung2345/leetcode-cpp-practices/blob/master/3.%20Longest%20Substring%20Without%20Repeating%20Characters.cpp
  *->https://www.interviewbit.com/blog/longest-substring-without-repeating-characters/
  *->shift array in C->https://stackoverflow.com/questions/55399500/c-array-how-can-i-shift-each-character-in-a-string
- *->https://www.youtube.com/watch?v=RqxIXM6eyiY&pp=ygUebGVldGNvZGUgIzMgbG9uZ2VzdCBzdHJpbmcgQysr
+ *in C++->https://www.youtube.com/watch?v=RqxIXM6eyiY&pp=ygUebGVldGNvZGUgIzMgbG9uZ2VzdCBzdHJpbmcgQysr
+ *in C->https://github.com/vli02/leetcode/blob/master/3.%20Longest%20Substring%20Without%20Repeating%20Characters.c
  */
 
 #include <string>
