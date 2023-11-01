@@ -1,9 +1,11 @@
+/*
  *->https://www.geeksforgeeks.org/window-sliding-technique/
  *->https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/
  *->about set->https://www.youtube.com/watch?v=682xT_TcKUg
  *->https://github.com/keineahnung2345/leetcode-cpp-practices/blob/master/3.%20Longest%20Substring%20Without%20Repeating%20Characters.cpp
  *->https://www.interviewbit.com/blog/longest-substring-without-repeating-characters/
  *->shift array in C->https://stackoverflow.com/questions/55399500/c-array-how-can-i-shift-each-character-in-a-string
+ *->https://www.youtube.com/watch?v=RqxIXM6eyiY&pp=ygUebGVldGNvZGUgIzMgbG9uZ2VzdCBzdHJpbmcgQysr
  */
 
 #include <string>
