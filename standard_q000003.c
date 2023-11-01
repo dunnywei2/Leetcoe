@@ -95,3 +95,7 @@ public:
 //i=0 as p, j=0 as p->chars->"p"->return true->max is 1
 //i=0 as p, j=2 as w->chars->"pww"->return false->no max
 //i=0 as p, j=3 as k->chars="pww"->return false->no max->can't continue since it will always get blocked in j=2, IMPORTANT
+
+//test case a) as
+a b c a b c b b
+0|1|2|3|4|5|6|7
