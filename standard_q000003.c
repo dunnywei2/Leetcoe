@@ -49,6 +49,8 @@ public:
         return ans;
     }
 #endif
+
+//windows method in C++
       int lengthOfLongestSubstring(string s) {
       std::set<char> Set;
         int max=0;
