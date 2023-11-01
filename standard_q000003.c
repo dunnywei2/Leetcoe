@@ -14,6 +14,8 @@ class Solution {
 protected:
 
 public:
+#if 0
+    //brute force way
     bool allUnique(string& s, int start, int end){
            set<char> chars;
 
@@ -44,6 +46,41 @@ public:
 
        
         return ans;
+    }
+#endif
+      int lengthOfLongestSubstring(string s) {
+      std::set<char> Set;
+        int max=0;
+        int start=0;
+        int end=0;
+
+        while(end<s.size())
+        {
+            // std::cout<<"end is"<<end<<std::endl;
+            auto iter=Set.find(s[end]);
+
+            if(iter==Set.end())
+            {
+                //unique one
+                int tnumber=end-start+1;
+                if(tnumber>max)
+                   max=tnumber;
+                std::cout<<"max "<<max <<" start " <<start <<" end "<<end<<std::endl;
+                Set.insert(s[end]);
+                end++;
+            }
+            else
+            {
+                //find the repitition pattern
+                std::cout<<"repieittion max "<<max <<" start " <<start <<" end"<<end<<std::endl;
+
+                Set.erase(s[start]);
+                start++;
+            }
+            
+        }         
+       
+        return max;
     }
 };    
     
