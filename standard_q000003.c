@@ -173,8 +173,8 @@ int lengthOfLongestSubstring(char* s) {
     int map[128]={0};
     for(int i=0;i<strlen(s);i++)
     {
-       chacracter=s[i];
-        map[chacracter]=i+1; //means the nth element
+       character=s[i];
+        map[character]=i+1; //means the nth element
         if(map[character]>0) //repetition occurs
         {
         }
@@ -183,10 +183,8 @@ int lengthOfLongestSubstring(char* s) {
         }
             
     }
-
     return max;
 }
-
 int main()
 {
    // char * temp="pwwkew";
