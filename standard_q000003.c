@@ -109,10 +109,11 @@ int lengthOfLongestSubstring(char * s){
     for(int i=0;i<length;i++)
     {
        n++;
-       c=s[j];
+       c=s[i];
 
        l=i-pos[c]+1;
        printf("l : %d, i: %d, c is %c, pos[c] %d, n is %d \n",l,i,c,pos[c],n);
+        pos[c] = i + 1;
 
        if(n>=l)
        {
