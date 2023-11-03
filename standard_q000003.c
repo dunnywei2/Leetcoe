@@ -174,7 +174,13 @@ int lengthOfLongestSubstring(char* s) {
     for(int i=0;i<strlen(s);i++)
     {
        chacracter=s[i];
-        map[chacracter]=i
+        map[chacracter]=i+1; //means the nth element
+        if(map[character]>0) //repetition occurs
+        {
+        }
+        else
+        {
+        }
             
     }
 
@@ -205,7 +211,13 @@ a b c a b c b b
 0|1|2|3|4|5|6|7
 
     s[0]=a
-    map['a']=0
+    map['a']=0+1
 
     s[1]=b
-    map['b']=1
+    map['b']=1+1
+
+    s[2]=c
+    map['c]'=2+1
+
+    s[3]=a //repetition detect
+    map['a']=
