@@ -170,10 +170,11 @@ int lengthOfLongestSubstring(char* s) {
     int start=0;
     int max=0;
     char character;
-    int ascii[128]={0};
+    int map[128]={0};
     for(int i=0;i<strlen(s);i++)
     {
-            
+       chacracter=s[i];
+        map[chacracter]=i
             
     }
 
@@ -202,3 +203,9 @@ int main()
 //test case a) as
 a b c a b c b b
 0|1|2|3|4|5|6|7
+
+    s[0]=a
+    map['a']=0
+
+    s[1]=b
+    map['b']=1
