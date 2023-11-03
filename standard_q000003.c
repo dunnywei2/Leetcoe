@@ -90,6 +90,10 @@ public:
 };
 
 //FOR C
+#include  <string.h>
+#include  <stdio.h>
+
+#if 0
 int lengthOfLongestSubstring(char * s){
     int length=strlen(s);
     // printf("length %d \n",length);
@@ -125,6 +129,35 @@ int lengthOfLongestSubstring(char * s){
     }
     
     return k;   
+}
+#endif
+
+#include  <string.h>
+#include  <stdio.h>
+
+int lengthOfLongestSubstring(char* s) {
+    int i, j, l, k = 0;
+    char c;
+    int pos[128] = { 0 };
+    char *p;
+    int n = 0;
+    for (i = 0; s[i]; i ++) {
+        n ++;
+        c = s[i];
+        l = i - pos[c] + 1;
+               printf("l : %d, i: %d, c is %c, pos[c] %d, n is %d \n",l,i,c,pos[c],n);
+
+        pos[c] = i + 1;
+        n = n < l ? n : l;
+        k = k > n ? k : n;
+    }
+    return k;
+}
+
+int main()
+{
+   char * temp="pwwkew";
+   printf("%d \n",lengthOfLongestSubstring(temp));
 }
     
     
