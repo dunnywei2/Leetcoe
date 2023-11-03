@@ -136,6 +136,8 @@ int lengthOfLongestSubstring(char * s){
 }
 #endif
 
+#if 0
+//from others
 #include  <string.h>
 #include  <stdio.h>
 
@@ -156,6 +158,26 @@ int lengthOfLongestSubstring(char* s) {
         k = k > n ? k : n;
     }
     return k;
+}
+#endif
+
+//my way
+#include  <string.h>
+#include  <stdio.h>
+
+int lengthOfLongestSubstring(char* s) {
+    int length=0;
+    int start=0;
+    int max=0;
+    char character;
+    int ascii[128]={0};
+    for(int i=0;i<strlen(s);i++)
+    {
+            
+            
+    }
+
+    return max;
 }
 
 int main()
