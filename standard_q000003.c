@@ -165,6 +165,7 @@ int lengthOfLongestSubstring(char* s) {
 #include  <string.h>
 #include  <stdio.h>
 
+FINDMAX(a,b) ((a)>(b)) ?(a):(b)
 int lengthOfLongestSubstring(char* s) {
     int length=0;
     int start=0;
@@ -177,6 +178,7 @@ int lengthOfLongestSubstring(char* s) {
         map[character]=i+1; //means the nth element
         if(map[character]>0) //repetition occurs
         {
+            start=FINDMAX(start,map[character]);
         }
         else
         {
