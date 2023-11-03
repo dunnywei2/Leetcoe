@@ -158,7 +158,9 @@ int lengthOfLongestSubstring(char* s) {
 
 int main()
 {
-   char * temp="pwwkew";
+   // char * temp="pwwkew";
+    
+   char * temp="abcabcbb";
    printf("%d \n",lengthOfLongestSubstring(temp));
 }
     
