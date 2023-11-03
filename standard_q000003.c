@@ -112,8 +112,9 @@ int lengthOfLongestSubstring(char * s){
        c=s[i];
 
        l=i-pos[c]+1;
-       printf("l : %d, i: %d, c is %c, pos[c] %d, n is %d \n",l,i,c,pos[c],n);
+       printf("1st->l : %d, i: %d, c is %c, pos[c] %d, n is %d \n",l,i,c,pos[c],n);
         pos[c] = i + 1;
+       printf("2nd ->l : %d, i: %d, c is %c, pos[c] %d, n is %d \n",l,i,c,pos[c],n);
 
        if(n>=l)
        {
@@ -124,7 +125,7 @@ int lengthOfLongestSubstring(char * s){
        if(k<=n)
        {
            k=n;
-           printf("n>=l: k %d \n",n);
+           printf("k<=n: k %d \n",n);
        }
         
     }
