@@ -176,20 +176,22 @@ int lengthOfLongestSubstring(char* s) {
     for(int i=0;i<strlen(s);i++)
     {
        
-        
+        character=s[i];
+
         if(map[character]>0) //repetition occurs
         {
             character=s[i];
-            printf("1st length %d, start %d, character %c, map[character] %d, max %d start %d \n",length,start,character, map[character],max,start); 
+            printf("1st length %d, start %d, character %c, map[character] %d, max %d start %d i  %d \n",length,start,character, map[character],max,start,i); 
 
             length=i-map[character]+1;
             start=map[character];
             max=FINDMAX(length,max);
             map[character]=i+1; //means the nth element
+            printf("2nd length %d, start %d, character %c, map[character] %d, max %d start %d i  %d \n",length,start,character, map[character],max,start,i); 
+
         }
         else
         {
-                character=s[i];
                 map[character]=i+1; //means the nth element
         }
             
