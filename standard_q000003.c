@@ -8,7 +8,7 @@
  *in C++->https://www.youtube.com/watch?v=RqxIXM6eyiY&pp=ygUebGVldGNvZGUgIzMgbG9uZ2VzdCBzdHJpbmcgQysr
  *in C->https://github.com/vli02/leetcode/blob/master/3.%20Longest%20Substring%20Without%20Repeating%20Characters.c
  *more relate to C video->https://www.youtube.com/watch?v=F5diwvtLirU
- *->doing in C with chinese explainayion->https://www.bilibili.com/video/BV1rh411z7rC/?spm_id_from=333.337.search-card.all.click&vd_source=352d86e561ef82fd069e1251bfae8933
+ *->doing in C with chinese explainayion as 力扣3 无重复字符的最长子串->https://www.bilibili.com/video/BV1rh411z7rC/?spm_id_from=333.337.search-card.all.click&vd_source=352d86e561ef82fd069e1251bfae8933
  */
 
 #include <string>
