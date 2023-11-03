@@ -10,6 +10,7 @@
  *more relate to C video->https://www.youtube.com/watch?v=F5diwvtLirU
  *->doing in C with chinese explainayion as 力扣3 无重复字符的最长子串->https://www.bilibili.com/video/BV1rh411z7rC/?spm_id_from=333.337.search-card.all.click&vd_source=352d86e561ef82fd069e1251bfae8933
  *->another one in C++ in Chinese->https://www.bilibili.com/video/BV1GM4y1F7vn/?spm_id_from=333.337.search-card.all.click&vd_source=352d86e561ef82fd069e1251bfae8933
+ *->another one for chinese explaination in general->https://www.youtube.com/watch?v=6Fprd_1_odo
  */
 
 #include <string>
