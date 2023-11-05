@@ -239,10 +239,23 @@ a b c a b c b b
     map['a']=3+1;
 
     s[4]=b//repetition occur
-    length=(i=4)-(old map['b'=2)+1=3
+    length=(i=4)-(old map['b']=2)+1=3
     start=2
     max=FINDMAX(3,length)=3
     map['b']=4+1=5
+
+    s[5]=c//repetition detect
+    length=(i=5)-(old map['c']=3)+1=3
+    1st start=2 //start is not used
+    max=3
+    map['c']=5+1
+    2nd start=3 //start is not used
+        
+    s[6]=b //repitition occurs
+    length=(i=6)-(old map['b'']=5)+1=2
+    max=3
+    map['b']=6+1=7
+    
         
 
 
