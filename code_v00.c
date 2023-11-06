@@ -1,4 +1,5 @@
 ->hash table in C->https://www.bilibili.com/video/BV1fr4y1i7Px/?spm_id_from=333.337.search-card.all.click&vd_source=352d86e561ef82fd069e1251bfae8933
+->serach terms->两数之和 哈希表 C
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) 
