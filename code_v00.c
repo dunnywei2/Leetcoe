@@ -33,15 +33,18 @@ public:
 /**
  * Note: The returned array must be malloced, assume caller calls free().
  */
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
-   int *rNumber=(int*)calloc( numsSize,sizeof(int));
+   int *rNumber=(int*)malloc(numsSize*sizeof(int));
     int map[128]={0};
     char character;
     int start=0;
     for(int i=0;i<numsSize;i++)
     {
         character=i;
-        if(map[character])>0)
+        if(map[character]>0)
         {
             
         }
