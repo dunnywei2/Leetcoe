@@ -35,8 +35,21 @@ public:
  */
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
    int *rNumber=(int*)calloc( numsSize,sizeof(int));
+    int map[128]={0};
+    char character;
+    int start=0;
     for(int i=0;i<numsSize;i++)
     {
+        character=i;
+        if(map[character])>0)
+        {
+            
+        }
+        else
+        {
+            
+        }    
+            
         
     }
     return rNumber;
