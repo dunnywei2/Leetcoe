@@ -26,3 +26,18 @@ public:
       return  tReturn;
     }
 };
+
+
+/**************in C*************************/
+
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
+   int *rNumber=(int*)calloc( numsSize,sizeof(int));
+    for(int i=0;i<numsSize;i++)
+    {
+        
+    }
+    return rNumber;
+}
