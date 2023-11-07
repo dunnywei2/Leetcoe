@@ -40,16 +40,20 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
    int *rNumber=(int*)malloc(numsSize*sizeof(int));
     int map[128]={0};
     char character;
-    int start=0;
+    
+    int diff=0;
     for(int i=0;i<numsSize;i++)
     {
-        character=i;
+        diff=target-nums[i];
+        
+        character=diff;
         if(map[character]>0)
         {
             
         }
         else
         {
+            map[character]=i+1;
             
         }    
             
