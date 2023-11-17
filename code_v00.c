@@ -1,4 +1,5 @@
 ->hash table in C->https://www.bilibili.com/video/BV1fr4y1i7Px/?spm_id_from=333.337.search-card.all.click&vd_source=352d86e561ef82fd069e1251bfae8933
+->in C->https://github.com/vli02/leetcode/blob/master/1.%20Two%20Sum.c
 ->serach terms->两数之和 哈希表 C
 class Solution {
 public:
@@ -36,6 +37,10 @@ public:
 /**
  * Note: The returned array must be malloced, assume caller calls free().
  */
+typedef struct _table{
+   int index;
+   int value;
+} table;
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
    int *rNumber=(int*)malloc(numsSize*sizeof(int));
     int map[128]={0};
