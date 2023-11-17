@@ -42,27 +42,32 @@ typedef struct _table{
    int value;
 } table;
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
-   int *rNumber=(int*)malloc(numsSize*sizeof(int));
-    int map[128]={0};
-    char character;
+    int length=sizeof(nums)/sizeof(nums[0]);
+    printf("length is %d \n",length);
+    printf("numsSize is %d \n",numsSize);
+
+    table tables[numsSize];
+    memset(tables,0,sizeof(tables));
+    int rNumber=0;
+    // char character;
     
-    int diff=0;
-    for(int i=0;i<numsSize;i++)
-    {
-        diff=target-nums[i];
+    // int diff=0;
+    // for(int i=0;i<numsSize;i++)
+    // {
+    //     diff=target-nums[i];
         
-        character=diff;
-        if(map[character]>0)
-        {
+    //     character=diff;
+    //     if(map[character]>0)
+    //     {
             
-        }
-        else
-        {
-            map[character]=i+1;
+    //     }
+    //     else
+    //     {
+    //         map[character]=i+1;
             
-        }    
+    //     }    
             
         
-    }
+    // }
     return rNumber;
 }
