@@ -41,6 +41,13 @@ typedef struct _table{
    int index;
    int value;
 } table;
+
+
+int cmp( const void*a, const void* b)
+{
+    int tmp=((table*)a->value-(table*)b->value);
+    return tmp;
+}
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     int length=sizeof(nums)/sizeof(nums[0]);
     printf("length is %d \n",length);
@@ -51,23 +58,14 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     int rNumber=0;
     // char character;
     
-    // int diff=0;
-    // for(int i=0;i<numsSize;i++)
-    // {
-    //     diff=target-nums[i];
-        
-    //     character=diff;
-    //     if(map[character]>0)
-    //     {
-            
-    //     }
-    //     else
-    //     {
-    //         map[character]=i+1;
-            
-    //     }    
-            
-        
-    // }
+    int diff=0;
+    //set up hash table
+    for(int i=0;i<numsSize;i++)
+    {
+          tables[i]->value=num[i];
+          tables[i]->index=i;
+    }
+    //sorting the hash table
+    qsort(tables,numsSize,sizeof(table),cmp);
     return rNumber;
 }
