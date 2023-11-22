@@ -67,5 +67,10 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     }
     //sorting the hash table
     qsort(tables,numsSize,sizeof(table),cmp);
+
+    for(int i=0;i<numSize;i++}
+    {
+        printf("value is %d i %d \n",tables[i]->value,i);
+    }
     return rNumber;
 }
