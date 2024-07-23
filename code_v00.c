@@ -31,45 +31,46 @@ public:
 
 /**************in C*************************/
 
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-typedef struct _table{
-   int index;
-   int value;
-} table;
-
-
-int cmp( const void*a, const void* b)
-{
-    table *a_ptr= (table*) a;
-    table *b_ptr=  (table*) b;
-    int tmp=(a_ptr->value)-(b_ptr->value);
-    return tmp;
+typedef struct data_s {
+   int val;
+   int idx;
+} data_t;
+int cmp(const void *a, const void *b) {
+   return ((data_t *)a)->val - ((data_t *)b)->val;
 }
-int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
-    int length=sizeof(nums)/sizeof(nums[0]);
-    printf("length is %d \n",length);
-    printf("numsSize is %d \n",numsSize);
-
-    table tables[length];
-    memset(tables,0,sizeof(tables));
-    int rNumber=0;
-    // char character;
-    
-    int diff=0;
-    //set up hash table
-    for(int i=0;i<length;i++)
+int* twoSum(int* nums, int numsSize, int target)
+{
+   int *indices;
+   int i, j, k;
+#if 0
+   
+#else
+    data_t *array;
+    array = malloc((numsSize + 1) * sizeof(data_t));
+    for (i = 0; i < numsSize; i ++)
     {
-          tables[i].value=nums[i];
-          tables[i].index=i;
+        array[i].val = nums[i];
+        array[i].idx = i;
     }
-    //sorting the hash table
-    qsort(tables,numsSize,sizeof(table),cmp);
+    qsort(array, numsSize, sizeof(data_t), cmp);
+    i = 0;
+    j = numsSize - 1;
+    while (i < j) {
+        k = array[i].val + array[j].val;
+        if (k == target) {
+            indices = malloc(2 * sizeof(int));
 
-    for(int i=0;i<length;i++)
-    {
-        printf("value is %d i %d \n",tables[i].value,i);
+        indices[0] = array[i].idx;
+        indices[1] = array[j].idx;
+        free(array);
+             return indices;
+        } else if (k < target) {
+            i ++;
+        } else {
+            j--;
+        }
     }
-    return rNumber;
+    free(array);
+#endif
+    return NULL;
 }
