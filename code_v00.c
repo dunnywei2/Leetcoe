@@ -31,20 +31,20 @@ public:
 
 /**************in C*************************/
 
+#include <stdio.h>
+#include <stdlib.h>
+
 typedef struct data_s {
    int val;
    int idx;
 } data_t;
 int cmp(const void *a, const void *b) {
-   return ((data_t *)a)->val - ((data_t *)b)->val;
+    return ((data_t *)a)->val - ((data_t *)b)->val;
 }
 int* twoSum(int* nums, int numsSize, int target)
 {
    int *indices;
    int i, j, k;
-#if 0
-   
-#else
     data_t *array;
     array = malloc((numsSize + 1) * sizeof(data_t));
     for (i = 0; i < numsSize; i ++)
@@ -55,7 +55,19 @@ int* twoSum(int* nums, int numsSize, int target)
     qsort(array, numsSize, sizeof(data_t), cmp);
     i = 0;
     j = numsSize - 1;
-    while (i < j) {
+
+     for (i = 0; i < numsSize; i ++)
+    {
+        printf("post process array[i].value %d array[i].idx - %d \n", array[i].val, array[i].idx);
+        array[i].val = nums[i];
+        array[i].idx = i;
+    }
+
+
+
+#if 0
+while (i < j) 
+{
         k = array[i].val + array[j].val;
         if (k == target) {
             indices = malloc(2 * sizeof(int));
@@ -70,7 +82,15 @@ int* twoSum(int* nums, int numsSize, int target)
             j--;
         }
     }
-    free(array);
+
 #endif
-    return NULL;
+    return 0;
 }
+
+int main()
+{
+    int numbs_param []={2,7,11,5};
+    twoSum(numbs_param,4,18);
+
+}
+                                
