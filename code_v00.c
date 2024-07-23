@@ -34,9 +34,6 @@ public:
 /**
  * Note: The returned array must be malloced, assume caller calls free().
  */
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
 typedef struct _table{
    int index;
    int value;
@@ -45,7 +42,9 @@ typedef struct _table{
 
 int cmp( const void*a, const void* b)
 {
-    int tmp=((table*)a->value-(table*)b->value);
+    table *a_ptr= (table*) a;
+    table *b_ptr=  (table*) b;
+    int tmp=(a_ptr->value)-(b_ptr->value);
     return tmp;
 }
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
@@ -53,24 +52,24 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     printf("length is %d \n",length);
     printf("numsSize is %d \n",numsSize);
 
-    table tables[numsSize];
+    table tables[length];
     memset(tables,0,sizeof(tables));
     int rNumber=0;
     // char character;
     
     int diff=0;
     //set up hash table
-    for(int i=0;i<numsSize;i++)
+    for(int i=0;i<length;i++)
     {
-          tables[i]->value=num[i];
-          tables[i]->index=i;
+          tables[i].value=nums[i];
+          tables[i].index=i;
     }
     //sorting the hash table
     qsort(tables,numsSize,sizeof(table),cmp);
 
-    for(int i=0;i<numSize;i++}
+    for(int i=0;i<length;i++)
     {
-        printf("value is %d i %d \n",tables[i]->value,i);
+        printf("value is %d i %d \n",tables[i].value,i);
     }
     return rNumber;
 }
