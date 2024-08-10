@@ -5,6 +5,9 @@
 ->hash table in C->https://www.bilibili.com/video/BV1fr4y1i7Px/?spm_id_from=333.337.search-card.all.click&vd_source=352d86e561ef82fd069e1251bfae8933
 ->in C->https://github.com/vli02/leetcode/blob/master/1.%20Two%20Sum.c
 ->serach terms->两数之和 哈希表 C
+->explaination
+    https://leetcode.com/problems/two-sum/solutions/189807/c-c-python-ts-js-java-various-solutions-c-is-o-n-time-and-just-6-lines-c-hashmap-solution/
+->
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) 
