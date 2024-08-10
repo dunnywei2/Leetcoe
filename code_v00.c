@@ -1,3 +1,7 @@
+->question needs to go through
+1), 20), 21), 121), 125),226), 242), 704), 733), 53), 235) 110), 141) ->First week
+
+
 ->hash table in C->https://www.bilibili.com/video/BV1fr4y1i7Px/?spm_id_from=333.337.search-card.all.click&vd_source=352d86e561ef82fd069e1251bfae8933
 ->in C->https://github.com/vli02/leetcode/blob/master/1.%20Two%20Sum.c
 ->serach terms->两数之和 哈希表 C
