@@ -103,7 +103,7 @@ int main()
 
 
 ----------------------------------------------------------------------------
-    #if 1
+   #if 1
 typedef struct data_s {
    int val;
    int idx;
@@ -133,8 +133,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
      for (i = 0; i < numsSize; i ++)
     {
         printf("post process array[i].value %d array[i].idx - %d \n", array[i].val, array[i].idx);
-        array[i].val = nums[i];
-        array[i].idx = i;
+      
     }
 
     for(i=0,j=numsSize - 1;i<j;)
@@ -188,4 +187,3 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
 }
 
 #endif
-                                
