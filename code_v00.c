@@ -100,4 +100,92 @@ int main()
     twoSum(numbs_param,4,18);
 
 }
+
+
+----------------------------------------------------------------------------
+    #if 1
+typedef struct data_s {
+   int val;
+   int idx;
+} data_t;
+int cmp(const void *a, const void *b) {
+    return ((data_t *)a)->val - ((data_t *)b)->val;
+}
+int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
+    int *return_array=(int*)malloc(2 * sizeof(int));
+    *returnSize=2;
+    return_array[0]=0;
+    return_array[1]=1;
+   
+    int *indices;
+   int i, j, k;
+    data_t *array;
+    array = malloc((numsSize + 1) * sizeof(data_t));
+    for (i = 0; i < numsSize; i ++)
+    {
+        array[i].val = nums[i];
+        array[i].idx = i;
+    }
+    qsort(array, numsSize, sizeof(data_t), cmp);
+    i = 0;
+    j = numsSize - 1;
+
+     for (i = 0; i < numsSize; i ++)
+    {
+        printf("post process array[i].value %d array[i].idx - %d \n", array[i].val, array[i].idx);
+        array[i].val = nums[i];
+        array[i].idx = i;
+    }
+
+    for(i=0,j=numsSize - 1;i<j;)
+    {
+        printf("within for loop %d %d\n",i,j);
+
+            printf("array[i].val is %d i is %d \n",array[i].val,i);
+            printf("array[j].val is %d j is %d \n",array[j].val,j);
+
+
+        if((array[i].val+array[j].val)==target)
+        {
+            return_array[0]=array[i].idx;
+            return_array[1]=array[j].idx;
+            printf("return_array[0] is %d \n",return_array[0]);
+            printf("return_array[1] is %d \n",return_array[1]);
+            break;
+        }
+        else if((array[i].val+array[j].val)<target)
+        {
+            i++;
+        }
+        else
+        {
+            j--;
+        }
+    }
+
+    return return_array;
+}
+
+#else
+
+int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
+    int* result = (int*)malloc(2 * sizeof(int));
+    *returnSize = 2;
+    
+    for (int i = 0; i < numsSize; i++) {
+        for (int j = i + 1; j < numsSize; j++) {
+            if (nums[i] + nums[j] == target) {
+                result[0] = i;
+                result[1] = j;
+                return result;
+            }
+        }
+    }
+    
+    result[0] = 0;
+    result[1] = 1;
+    return result;
+}
+
+#endif
                                 
