@@ -1,6 +1,9 @@
 ->question needs to go through
 1), 20), 21), 121), 125),226), 242), 704), 733), 53), 235) 110), 141) ->First week
 
+->questions for second week
+232) 278) 383) 70) 409) 206) 169) 67) 543) 876) 104) 217)
+
 
 ->hash table in C->https://www.bilibili.com/video/BV1fr4y1i7Px/?spm_id_from=333.337.search-card.all.click&vd_source=352d86e561ef82fd069e1251bfae8933
 ->in C->https://github.com/vli02/leetcode/blob/master/1.%20Two%20Sum.c
