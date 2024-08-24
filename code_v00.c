@@ -4,6 +4,15 @@
 ->questions for second week
 232) 278) 383) 70) 409) 206) 169) 67) 543) 876) 104) 217)
 
+->question for 3rd week
+    57) 542) 973) 3) 15) 102) 133) 150)
+
+->question for 4th week
+    207) 208) 322) 
+
+->question for 5th week
+    33) 39) 46) 56) 236) 981) 721) 75)
+
 
 ->hash table in C->https://www.bilibili.com/video/BV1fr4y1i7Px/?spm_id_from=333.337.search-card.all.click&vd_source=352d86e561ef82fd069e1251bfae8933
 ->in C->https://github.com/vli02/leetcode/blob/master/1.%20Two%20Sum.c
