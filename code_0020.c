@@ -29,3 +29,11 @@ for(int i = 0; s[i]; i++) {
 
 return t == -1;
 }
+-----------------------------------------------------------------------------------------------------------------------
+  //Don's solution
+  bool isValid(char* s) {
+      int strengLength=strlen(s);
+      int counter=0;
+
+
+  }
