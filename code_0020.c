@@ -34,6 +34,16 @@ return t == -1;
   bool isValid(char* s) {
       int strengLength=strlen(s);
       int counter=0;
+      for (int i=0;i<strengLength;i++)
+      {
+        char ch=s[i];
+        switch(ch):
+          case ')':
 
+          break;
+        default:
+          break;
+        
+      }
 
   }
