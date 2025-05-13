@@ -51,3 +51,25 @@ public:
         return {}; // This line is never reached due to the problem guarantee
     }
 };
+
+---------------------------------------
+/*my hasmap Java*?
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> hashmap = new HashMap<>();
+
+        for(int i=0;i<numbs.length;i++)
+        {
+            
+            int diff=target-nums[i];
+            if(hashmap.contain(diff))
+            {
+                return new int{hashmap.get(diff),i};
+            }
+            else{
+                hashmap.put(diff,i);
+            }
+        }
+        
+    }
+}
