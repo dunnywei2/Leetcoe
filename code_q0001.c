@@ -85,10 +85,20 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
         unorder_map<int,int> hashmap;
+        std::vector<int> rValue;
         for(int i=0;i<nums.size();i++)
         {
             int diff=target-nums[i];
-            
+            if(hasmap.contains(diff))
+            {
+               rValue.push_back(hashmap[hashmap]);
+               rValue.push_back(i);
+               return rValue;
+            }
+            else
+            {
+               hashmap.insert(nums[i],i)
+            }
         }
         
     }
