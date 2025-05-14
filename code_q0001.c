@@ -84,22 +84,25 @@ class Solution {
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        unorder_map<int,int> hashmap;
+        unordered_map<int,int> hashmap;
         std::vector<int> rValue;
         for(int i=0;i<nums.size();i++)
         {
             int diff=target-nums[i];
-            if(hasmap.contains(diff))
+            if(hashmap.find(diff)!=hashmap.end())
             {
-               rValue.push_back(hashmap[hashmap]);
+               int temp=hashmap[diff];
+               std::cout<<"temp is"<<temp<<std::endl;
+               rValue.push_back(temp);
                rValue.push_back(i);
                return rValue;
             }
             else
             {
-               hashmap.insert(nums[i],i)
+               hashmap.insert(std::make_pair(nums[i],i));
             }
         }
+        return rValue;
         
     }
 };
