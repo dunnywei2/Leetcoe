@@ -77,14 +77,30 @@ private:
       return false;  
    }
 
+   string findContent(string &log)
+   {
+      int i=0;
+      while(i<log.size()&&log[i]!=' ')
+      {
+         i++;
+      }
+      return log.substr(i);  
+   }
+
 public:
     vector<string> reorderLogFiles(vector<string>& logs) {
         vector<string> letterLog;
         for(string &log:logs)
         {
             std::cout<<"log"<<log<<std::endl;
-            cout<<isLetter(log)<<endl;
+            if(isLetter(log))
+            {
+               letterLog.push_back(log);
+            }
         }
+        std::string temp="dig1 8 1 5 1";
+        string ContentA=findContent(temp);
+        cout<<"ContentA "<<ContentA<<endl;
         return letterLog;
     }
 };
