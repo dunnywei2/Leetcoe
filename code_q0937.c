@@ -64,3 +64,33 @@ public:
 
     }
 };
+
+---------------my C++ solution--------------
+  class Solution {
+private:
+   bool isLetter(string &logA)
+   {
+    //   int size=logA.size()-1;
+#if 1
+    //   if(logA[size]>='a')
+    if((logA[logA.size()-1]>='a')&&(logA[logA.size()-1]>='z'))
+    {
+        std::cout<<"TRUE"<<std::endl;
+         return true;
+    }
+#endif
+      std::cout<<"FALSE"<<std::endl;
+      return false;
+   }
+
+public:
+    vector<string> reorderLogFiles(vector<string>& logs) {
+        vector<string> letterLog;
+        for(string &log:logs)
+        {
+            std::cout<<"log"<<log<<std::endl;
+            isLetter(log);
+        }
+        return letterLog;
+    }
+};
