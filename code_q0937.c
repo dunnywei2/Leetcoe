@@ -66,21 +66,15 @@ public:
 };
 
 ---------------my C++ solution--------------
-  class Solution {
+class Solution {
 private:
    bool isLetter(string &logA)
    {
-    //   int size=logA.size()-1;
-#if 1
-    //   if(logA[size]>='a')
-    if((logA[logA.size()-1]>='a')&&(logA[logA.size()-1]>='z'))
-    {
-        std::cout<<"TRUE"<<std::endl;
+      if((logA[logA.size()-1]>='a')&&(logA[logA.size()-1]<='z'))
+      {
          return true;
-    }
-#endif
-      std::cout<<"FALSE"<<std::endl;
-      return false;
+      }
+      return false;  
    }
 
 public:
@@ -89,7 +83,7 @@ public:
         for(string &log:logs)
         {
             std::cout<<"log"<<log<<std::endl;
-            isLetter(log);
+            cout<<isLetter(log)<<endl;
         }
         return letterLog;
     }
