@@ -106,7 +106,7 @@ public:
         vector<string> letterLog;
         for(string &log:logs)
         {
-            std::cout<<"log"<<log<<std::endl;
+            std::cout<<"log "<<log<<std::endl;
             if(isLetter(log))
             {
                letterLog.push_back(log);
@@ -120,10 +120,20 @@ public:
         string testTemp=findkey(temp);
         cout<<"testTemp"<<testTemp<<endl;
 #else
+    int counter=0;
     std::sort(letterLog.begin(),letterLog.end(),[&](string a,string b)
     {
         std::string contentA=findContent(a);
         std::string contentB=findContent(b);
+        cout<<"counter "<<counter<<endl;
+        cout<<"contentA "<<contentA<<endl;
+        cout<<"contentB "<<contentB<<endl;
+        counter++;
+
+        // if(contentA==contentB)
+        // {
+        //     return findKey(a)>findkey(b)
+        // }
 
         return true;
     }
