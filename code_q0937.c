@@ -112,12 +112,24 @@ public:
                letterLog.push_back(log);
             }
         }
+#if 0
         std::string temp="dig1 8 1 5 1";
         string ContentA=findContent(temp);
         cout<<"ContentA "<<ContentA<<endl;
 
         string testTemp=findkey(temp);
         cout<<"testTemp"<<testTemp<<endl;
+#else
+    std::sort(letterLog.begin(),letterLog.end(),[&](string a,string b)
+    {
+        std::string contentA=findContent(a);
+        std::string contentB=findContent(b);
+
+        return true;
+    }
+    );
+
+#endif
         return letterLog;
     }
 };
