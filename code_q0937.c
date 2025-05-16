@@ -87,6 +87,20 @@ private:
       return log.substr(i);  
    }
 
+   string findkey(string &log)
+   {
+     string key="";
+     for(char &ch:log)
+     {
+        if(ch==' ')
+        {
+            break;
+        }
+        key+=ch;
+     }
+     return key;
+   }
+
 public:
     vector<string> reorderLogFiles(vector<string>& logs) {
         vector<string> letterLog;
@@ -101,6 +115,9 @@ public:
         std::string temp="dig1 8 1 5 1";
         string ContentA=findContent(temp);
         cout<<"ContentA "<<ContentA<<endl;
+
+        string testTemp=findkey(temp);
+        cout<<"testTemp"<<testTemp<<endl;
         return letterLog;
     }
 };
