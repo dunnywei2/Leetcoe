@@ -112,14 +112,14 @@ public:
                letterLog.push_back(log);
             }
         }
-#if 0
-        std::string temp="dig1 8 1 5 1";
-        string ContentA=findContent(temp);
-        cout<<"ContentA "<<ContentA<<endl;
 
-        string testTemp=findkey(temp);
-        cout<<"testTemp"<<testTemp<<endl;
-#else
+        // std::string temp="dig1 8 1 5 1";
+        // string ContentA=findContent(temp);
+        // cout<<"ContentA "<<ContentA<<endl;
+
+        // string testTemp=findkey(temp);
+        // cout<<"testTemp"<<testTemp<<endl;
+
     int counter=0;
     std::sort(letterLog.begin(),letterLog.end(),[&](string a,string b)
     {
@@ -137,20 +137,28 @@ public:
             return boolTemp;
         }
         else{
-
-        
              bool boolTemp2=contentA<contentB;
-
-
             std::cout<<"boolTemp2 "<<boolTemp2<<endl;
             return boolTemp2;
         }
-
         return true;
     }
     );
 
-#endif
-        return letterLog;
+     vector<string> res;
+        for(string &letterLog_ind: letterLog) 
+            res.push_back(letterLog_ind);
+
+
+       for(string &log:logs)
+       {
+            if(!isLetter(log))
+            {
+               res.push_back(log);
+            }
+        }
+
+        return res;
+        // return letterLog;
     }
 };
