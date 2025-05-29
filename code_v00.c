@@ -268,10 +268,11 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
 }
 //another solution
 https://medium.com/@AlexanderObregon/solving-the-two-sum-problem-on-leetcode-c-answers-walkthrough-715066492a7a  
-
+----------------------------------------------------------------------------------------------------------------
 //implement qsort by ourself in C
 //Here is an implementation of the qsort function in C, which uses the QuickSort algorithm to sort an array. This implementation is flexible and allows sorting of any data type by using function pointers for comparison.
 //quick sort->https://www.youtube.com/watch?v=WprjBK0p6rw
+//quick sort2->https://www.youtube.com/watch?v=Vtckgz38QHs
 
 #include <stdio.h>
 #include <stdlib.h>
