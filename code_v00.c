@@ -268,3 +268,84 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
 }
 //another solution
 https://medium.com/@AlexanderObregon/solving-the-two-sum-problem-on-leetcode-c-answers-walkthrough-715066492a7a  
+
+//implement qsort by ourself in C
+Here is an implementation of the qsort function in C, which uses the QuickSort algorithm to sort an array. This implementation is flexible and allows sorting of any data type by using function pointers for comparison.
+
+Copy the code
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+// Swap two elements in memory
+void swap(void *a, void *b, size_t size) {
+    char temp[size];
+    memcpy(temp, a, size);
+    memcpy(a, b, size);
+    memcpy(b, temp, size);
+}
+
+// Partition function for QuickSort
+int partition(void *base, size_t size, int low, int high, int (*cmp)(const void *, const void *)) {
+    char *arr = (char *)base;
+    void *pivot = arr + high * size;
+    int i = low - 1;
+
+    for (int j = low; j < high; j++) {
+        if (cmp(arr + j * size, pivot) < 0) {
+            i++;
+            swap(arr + i * size, arr + j * size, size);
+        }
+    }
+    swap(arr + (i + 1) * size, arr + high * size, size);
+    return i + 1;
+}
+
+// QuickSort implementation
+void quicksort(void *base, size_t num, size_t size, int (*cmp)(const void *, const void *)) {
+    if (num < 2) return;
+
+    char *arr = (char *)base;
+    int low = 0, high = num - 1;
+
+    int stack[high - low + 1];
+    int top = -1;
+
+    stack[++top] = low;
+    stack[++top] = high;
+
+    while (top >= 0) {
+        high = stack[top--];
+        low = stack[top--];
+
+        int p = partition(arr, size, low, high, cmp);
+
+        if (p - 1 > low) {
+            stack[++top] = low;
+            stack[++top] = p - 1;
+        }
+
+        if (p + 1 < high) {
+            stack[++top] = p + 1;
+            stack[++top] = high;
+        }
+    }
+}
+
+// Comparison function for integers
+int compare_int(const void *a, const void *b) {
+    return (*(int *)a - *(int *)b);
+}
+
+// Example usage
+int main() {
+    int arr[] = {10, 7, 8, 9, 1, 5};
+    size_t n = sizeof(arr) / sizeof(arr[0]);
+
+    quicksort(arr, n, sizeof(int), compare_int);
+
+    printf("Sorted array: ");
+    for (size_t i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+
+
