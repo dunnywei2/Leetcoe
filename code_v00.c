@@ -1,4 +1,4 @@
-->question needs to go through
+    ->question needs to go through
 1), 20), 21), 121), 125),226), 242), 704), 733), 53), 235) 110), 141) ->First week
 
 ->questions for second week
@@ -199,3 +199,72 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
 }
 
 #endif
+
+-------------------------------
+    /**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+typedef struct data_s {
+   int val;
+   int idx;
+} data_t;
+int cmp(const void *a, const void *b) {
+    return ((data_t *)a)->val - ((data_t *)b)->val;
+}
+int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
+    int *return_array=(int*)malloc(2 * sizeof(int));
+    *returnSize=2;
+    return_array[0]=0;
+    return_array[1]=1;
+   
+    int *indices;
+   int i, j, k;
+    data_t *array;
+    array = malloc((numsSize + 1) * sizeof(data_t));
+    for (i = 0; i < numsSize; i ++)
+    {
+        array[i].val = nums[i];
+        array[i].idx = i;
+
+        printf("i is %d, nums[i] %d \n",i, nums[i]);
+    }
+    qsort(array, numsSize, sizeof(data_t), cmp);
+    i = 0;
+    j = numsSize - 1;
+
+     for (i = 0; i < numsSize; i ++)
+    {
+        printf("post process array[i].value %d array[i].idx - %d \n", array[i].val, array[i].idx);
+      
+    }
+
+    for(i=0,j=numsSize - 1;i<j;)
+    {
+        printf("within for loop %d %d\n",i,j);
+
+            printf("array[i].val is %d i is %d \n",array[i].val,i);
+            printf("array[j].val is %d j is %d \n",array[j].val,j);
+
+
+        if((array[i].val+array[j].val)==target)
+        {
+            return_array[0]=array[i].idx;
+            return_array[1]=array[j].idx;
+            printf("return_array[0] is %d \n",return_array[0]);
+            printf("return_array[1] is %d \n",return_array[1]);
+            break;
+        }
+        else if((array[i].val+array[j].val)<target)
+        {
+            i++;
+        }
+        else
+        {
+            j--;
+        }
+    }
+
+    return return_array;
+}
+//another solution
+https://medium.com/@AlexanderObregon/solving-the-two-sum-problem-on-leetcode-c-answers-walkthrough-715066492a7a  
