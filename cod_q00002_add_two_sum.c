@@ -70,19 +70,21 @@ public:
 
 struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
     struct ListNoe* i=NULL,j=NULL,head=NULL;
-    int value=0;
+    int carry=0;
     
-    while()
-    if(l1)
+    while((l1!=NULL)||(l2!=NULL)||(carry!=0))
     {
-        value+=l1.value;
-        l1=l1->next;
-    }
+       if(l1)
+        {
+            value+=l1.value;
+             l1=l1->next;
+        }
 
-    if(l2)
-    {
-        value+=l2.value;
-        l2=l2->next;
+        if(l2)
+        {
+            value+=l2.value;
+            l2=l2->next;
+        }
     }
     return head;
 }
