@@ -350,3 +350,6 @@ int main() {
         printf("%d ", arr[i]);
     }
 }
+
+/**brute force way for add sum */
+asize
