@@ -352,4 +352,31 @@ int main() {
 }
 
 /**brute force way for add sum */
-asize
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int addsum(int *a,int *aResult1,int *aResult2,size_t asize)
+{
+    printf("asize is %d \n",asize);
+    return 0;
+}
+
+
+int main()
+{
+
+
+
+    int test1[]={2,7,11,5};
+    int indice1=0;
+    int indice2=0;
+    
+    size_t size=sizeof(test1)/sizeof(test1[0]);
+
+    printf("size is %d \n",size);
+    int result=addsum(test1,&indice1,&indice2,size);
+    printf("indice1 %d \n",indice1);
+    printf("indice2 %d \n", indice2);
+    // printf("result is %d \n",result);
+}
