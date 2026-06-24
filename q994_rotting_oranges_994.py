@@ -25,7 +25,7 @@ class Solution:
         while q and fresh >0:
             #if there is a rot organe and # of fresh >0 do
             for i in range(len(q)):
-                r,c =q.pop()
+                r,c =q.popleft()
                 print("r %d c %d"%(r,c))
                 for dr,dc in directions:
                     print("dr %d dc %d"%(dr,dc))
