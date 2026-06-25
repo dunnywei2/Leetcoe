@@ -1,4 +1,11 @@
 #https://www.youtube.com/watch?v=y704fEOx0s0&t=234s
+
+
+#0 representing an empty cell,
+#1 representing a fresh orange, or
+#2 representing a rotten orange.
+
+
 from collections import deque
 from pprint import pprint
 
